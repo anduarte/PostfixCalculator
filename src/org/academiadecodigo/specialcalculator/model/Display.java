@@ -1,4 +1,4 @@
-package org.academiadecodigo.specialcalculator.util;
+package org.academiadecodigo.specialcalculator.model;
 
 /**
  * Created by codecadet on 10/05/16.

@@ -4,12 +4,18 @@ package org.academiadecodigo.specialcalculator.util;
  * Created by codecadet on 10/05/16.
  */
 public enum  OperationType {
-    ADD("+"), SUB("-"), MULTI("*"), DIV("/");
+    ADD("+", 0), SUB("-", 0), MULTI("*", 1), DIV("/", 1), POW("^", 2);
 
-    private String symbol; // Store the operation symbol
+    private String symbol;  // Store the operation symbol
+    private int priority;   // Give a priority to the operation
 
-    OperationType(String symbol) {
+    OperationType(String symbol, int priority) {
         this.symbol = symbol;
+        this.priority = priority;
+    }
+
+    public int getPriority() {
+        return this.priority;
     }
 
     /**
@@ -30,6 +36,9 @@ public enum  OperationType {
 
             case "/":
                 return DIV;
+
+            case "^":
+                return POW;
 
             default:
                 return null;

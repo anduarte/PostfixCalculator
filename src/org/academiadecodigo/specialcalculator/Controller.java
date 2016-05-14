@@ -1,8 +1,8 @@
 package org.academiadecodigo.specialcalculator;
 
 import org.academiadecodigo.specialcalculator.model.Stack;
-import org.academiadecodigo.specialcalculator.util.Brain;
-import org.academiadecodigo.specialcalculator.util.Display;
+import org.academiadecodigo.specialcalculator.model.Brain;
+import org.academiadecodigo.specialcalculator.model.Display;
 import org.academiadecodigo.specialcalculator.util.OperationType;
 
 /**
@@ -15,7 +15,7 @@ public class Controller {
         this.valueStack = new Stack(expression.length); // create a stack for the values
         Brain brain = new Brain();                      // create the brain
         Display display = new Display();                // create the display
-        float result;                                   // store the result
+        double result;                                   // store the result
         int index = 0;                                  // position on the expression
 
         while (index < expression.length) {
