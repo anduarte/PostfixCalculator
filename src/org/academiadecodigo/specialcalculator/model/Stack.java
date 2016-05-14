@@ -5,45 +5,37 @@ package org.academiadecodigo.specialcalculator.model;
  */
 public class Stack {
     private String[] stack;
-    private int stackPosition = 0;
+    private int stackPosition;  // current values in the stack
 
     public Stack(int size) {
+        this.stackPosition = 0;
         this.stack = new String[size];
     }
 
+    /**
+     * Push a value to the stack
+     * @param str
+     */
     public void push(String str) {
-        str = switchOperations(str);
-
         this.stack[this.stackPosition] = str;
         this.stackPosition++;
     }
 
+    /**
+     * Pops a value out of the stack
+     * @return
+     */
     public String pop() {
         this.stackPosition--;
         return this.stack[this.stackPosition]; // add one because is the current position
     }
 
+    /**
+     * checks if the stack is empty
+     * @return
+     */
     public boolean isEmpty() {
         return this.stackPosition == 0;
-    }
-
-    public String switchOperations(String str) {
-        if((str.equals("+") || str.equals("-")) && this.stackPosition != 0) {
-
-            String strPushed = this.stack[this.stackPosition - 1];
-
-            if(strPushed.equals("*") || strPushed.equals("/")) {
-                pop();
-                push(str);
-
-                return strPushed;
-            } else {
-                return str;
-            }
-
-        } else {
-            return str;
-        }
     }
 
     @Override

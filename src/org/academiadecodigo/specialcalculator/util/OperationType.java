@@ -6,12 +6,17 @@ package org.academiadecodigo.specialcalculator.util;
 public enum  OperationType {
     ADD("+"), SUB("-"), MULTI("*"), DIV("/");
 
-    private String symbol;
+    private String symbol; // Store the operation symbol
 
     OperationType(String symbol) {
         this.symbol = symbol;
     }
 
+    /**
+     * Checks what is the symbol and returns the operation type
+     * @param symbol
+     * @return
+     */
     public static OperationType symbolToOperation(String symbol) {
         switch (symbol) {
             case "+":

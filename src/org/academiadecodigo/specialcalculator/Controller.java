@@ -10,45 +10,32 @@ import org.academiadecodigo.specialcalculator.util.OperationType;
  */
 public class Controller {
     Stack valueStack;
-    Stack operationsStack;
 
-    public void fillStacks(String[] expression) {
-        this.valueStack = new Stack(expression.length);
-        this.operationsStack = new Stack(expression.length);
-
-        int index = 0;
+    public void calculate(String[] expression) {
+        this.valueStack = new Stack(expression.length); // create a stack for the values
+        Brain brain = new Brain();                      // create the brain
+        Display display = new Display();                // create the display
+        float result;                                   // store the result
+        int index = 0;                                  // position on the expression
 
         while (index < expression.length) {
             String str = expression[index];
 
-            if(str.matches("^[0-9]*$")) {
+            if(str.matches("^[0-9]*$")) {   // if is a number push to stack
                 valueStack.push(str);
-            } else {
-                operationsStack.push(str);
+            } else {                        // otherwise calculate
+                float value1 = Float.parseFloat(this.valueStack.pop());
+                float value2 = Float.parseFloat(this.valueStack.pop());
+                OperationType op = OperationType.symbolToOperation(str);
+
+                result = brain.runOperation(value1, value2, op);
+
+                this.valueStack.push(result + "");
             }
 
             index++;
         }
-    }
-
-    public void showResult() {
-        Brain brain = new Brain();
-        Display display = new Display();
-
-        float result = 0.0F;
-
-        while(!this.operationsStack.isEmpty()) {
-
-            float value1 = Float.parseFloat(this.valueStack.pop());
-            float value2 = Float.parseFloat(this.valueStack.pop());
-            OperationType op = OperationType.symbolToOperation(this.operationsStack.pop());
-
-            result = brain.runOperation(value1, value2, op);
-
-            this.valueStack.push(result + "");
-        }
 
         display.showResult(Float.parseFloat(this.valueStack.pop()));
     }
-
 }

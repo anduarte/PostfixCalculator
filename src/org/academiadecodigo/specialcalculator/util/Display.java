@@ -5,6 +5,10 @@ package org.academiadecodigo.specialcalculator.util;
  */
 public class Display {
 
+    /**
+     * prints the result
+     * @param result
+     */
     public void showResult(float result) {
         System.out.println(result);
     }
