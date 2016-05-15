@@ -70,6 +70,14 @@ public class PostfixConversion {
             int sPriority = OperationType.symbolToOperation(s).getPriority();
             int stackOperationPriority = OperationType.symbolToOperation(stackOperation).getPriority();
 
+            // In some calculator and comparing results
+            // appearing ^ this two times followed the priority is not applied but with this if it resolve it
+            /*if(s.equals("^") && stackOperation.equals("^")) {
+                this.operationsStack.push(s);
+                this.operationsStack.push(stackOperation);
+                return;
+            }*/
+
             // if the operation pop from the stack has an higher priority or equals to the string passed as argument
             // the popped operations go to the expression and the string is pushed
             // else are both pushed to the stack with the stack operation going first

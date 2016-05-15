@@ -42,7 +42,7 @@ public class Brain {
             case SUB: return this.subtraction(number, number2);
             case DIV: return this.division(number, number2);
             case POW: return this.power(number, number2);
-            default: return 0.0F;
+            default: return 0.0D;
         }
     }
 }

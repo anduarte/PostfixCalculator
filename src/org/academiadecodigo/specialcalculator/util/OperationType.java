@@ -7,7 +7,7 @@ public enum  OperationType {
     ADD("+", 0), SUB("-", 0), MULTI("*", 1), DIV("/", 1), POW("^", 2);
 
     private String symbol;  // Store the operation symbol
-    private int priority;   // Give a priority to the operation
+    private int priority;   // Give a priority to the operation. Useful for postfix conversion
 
     OperationType(String symbol, int priority) {
         this.symbol = symbol;

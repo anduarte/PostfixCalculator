@@ -24,8 +24,9 @@ public class Controller {
             if(str.matches("^[0-9]*$")) {   // if is a number push to stack
                 valueStack.push(str);
             } else {                        // otherwise calculate
-                float value1 = Float.parseFloat(this.valueStack.pop());
+
                 float value2 = Float.parseFloat(this.valueStack.pop());
+                float value1 = Float.parseFloat(this.valueStack.pop());
                 OperationType op = OperationType.symbolToOperation(str);
 
                 result = brain.runOperation(value1, value2, op);
