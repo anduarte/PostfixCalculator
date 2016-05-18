@@ -10,10 +10,13 @@ public class Main {
         PostfixConversion postfixConversion = new PostfixConversion();
         Controller controller = new Controller();
 
+        // Test
         //String str = "3 + 4 * 2 / ( 1 - 5 ) ^ 2 ^ 3"; // problem when converting this to postfix because of priorities
                                                         // in postfix conversion resolve it but don't no what is right
         //String str = "1 * ( 2 + 3 ) * 4";
-        String str = "( 1 + 2 ) * ( 3 - 4 )";
+        //String str = "( 1 + 2 ) * ( 3 - 4 )";
+        //String str = "( 5 + 3 ) * 12 / 3";
+        String str = "1 ^ 2 / ( 5 * 3 ) + 10";
 
         System.out.println("Expression to check: " + str);
 
