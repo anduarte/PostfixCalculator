@@ -23,7 +23,7 @@ public class PostfixConversion {
             if(s.matches("^[0-9]*$")) {                 // if is a number goes directly to the postfix expression
                 this.postfixExpression += s + " ";
             } else {
-                // go check some condition to see if the operation goes to the stack or to the expression
+                // check some condition to see if the operation goes to the stack or to the expression
                 operatorVerification(s);
             }
         }
@@ -45,7 +45,7 @@ public class PostfixConversion {
 
             // if is equals to close parenthesis it will save the value from stack
             // pop the next operation from the stack to see if is a open parenthesis
-            // if it is, doesn't goes to the stack otherwise is a operation is pushed to the stack again
+            // if it is, don't go to the stack, if is a operation is pushed to the stack again
             if(s.equals(")")) {
                 this.postfixExpression += stackOperation + " ";
                 stackOperation = this.operationsStack.pop();
@@ -71,7 +71,7 @@ public class PostfixConversion {
             int stackOperationPriority = OperationType.symbolToOperation(stackOperation).getPriority();
 
             // In some calculator and comparing results
-            // appearing ^ this two times followed the priority is not applied but with this if it resolve it
+            // appearing ^ this two times followed the priority is not applied
             /*if(s.equals("^") && stackOperation.equals("^")) {
                 this.operationsStack.push(s);
                 this.operationsStack.push(stackOperation);

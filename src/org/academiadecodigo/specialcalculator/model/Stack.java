@@ -5,7 +5,7 @@ package org.academiadecodigo.specialcalculator.model;
  */
 public class Stack {
     private String[] stack;
-    private int stackPosition;  // current values in the stack
+    private int stackPosition;  // total of values in the stack
 
     public Stack(int size) {
         this.stackPosition = 0;
@@ -27,7 +27,7 @@ public class Stack {
      */
     public String pop() {
         this.stackPosition--;
-        return this.stack[this.stackPosition]; // add one because is the current position
+        return this.stack[this.stackPosition];
     }
 
     /**

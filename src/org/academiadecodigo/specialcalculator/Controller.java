@@ -15,7 +15,7 @@ public class Controller {
         this.valueStack = new Stack(expression.length); // create a stack for the values
         Brain brain = new Brain();                      // create the brain
         Display display = new Display();                // create the display
-        double result;                                   // store the result
+        double result;                                  // store the result
         int index = 0;                                  // position on the expression
 
         while (index < expression.length) {

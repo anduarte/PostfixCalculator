@@ -6,8 +6,8 @@ package org.academiadecodigo.specialcalculator.util;
 public enum  OperationType {
     ADD("+", 0), SUB("-", 0), MULTI("*", 1), DIV("/", 1), POW("^", 2);
 
-    private String symbol;  // Store the operation symbol
-    private int priority;   // Give a priority to the operation. Useful for postfix conversion
+    private String symbol;  // Operation symbol
+    private int priority;   // Give a priority to the operation. Used on the postfix conversion
 
     OperationType(String symbol, int priority) {
         this.symbol = symbol;
