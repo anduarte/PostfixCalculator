@@ -1,9 +1,11 @@
-package org.academiadecodigo.specialcalculator.model;
+package org.academiadecodigo.postfixcalculator.model;
 
-import org.academiadecodigo.specialcalculator.util.OperationType;
+import org.academiadecodigo.postfixcalculator.util.OperationType;
 
 /**
  * Created by codecadet on 10/05/16.
+ *
+ * Class responsible to calculate
  */
 public class Brain {
 
@@ -30,9 +32,10 @@ public class Brain {
 
     /**
      * Responsible for doing the operations
+     *
      * @param number
      * @param number2
-     * @param op
+     * @param op Operation
      * @return the result of the operation
      */
     public double runOperation(float number, float number2, OperationType op) {

@@ -1,18 +1,22 @@
-package org.academiadecodigo.specialcalculator.util;
+package org.academiadecodigo.postfixcalculator.util;
 
-import org.academiadecodigo.specialcalculator.model.Stack;
+import org.academiadecodigo.postfixcalculator.model.Stack;
 
 /**
  * Created by andre on 14/05/2016.
+ *
+ * Class that handles with the conversion from infix to postfix
  */
 public class PostfixConversion {
-    String postfixExpression;
-    Stack operationsStack;
+    private String postfixExpression;
+
+    /** Stack which handle the priority of the operations */
+    private Stack operationsStack;
 
     /**
      * Convert infix to postfix
      * @param str mathematical expression to convert
-     * @return string with the postfix expression
+     * @return Postfix expression
      */
     public String toPostfix(String str) {
         String[] strings = str.split(" ");
@@ -36,6 +40,12 @@ public class PostfixConversion {
         return this.postfixExpression;
     }
 
+    /**
+     * Organize the operation.
+     * Verify the priority of the operation and manipulate the stack operations
+     *
+     * @param s Operation
+     */
     public void operatorVerification(String s) {
         // if the stack is empty the operation is pushed to the stack
         if(this.operationsStack.isEmpty()) {
@@ -70,8 +80,8 @@ public class PostfixConversion {
             int sPriority = OperationType.symbolToOperation(s).getPriority();
             int stackOperationPriority = OperationType.symbolToOperation(stackOperation).getPriority();
 
-            // In some calculator and comparing results
-            // appearing ^ this two times followed the priority is not applied
+            // In some calculators
+            // appearing ^ this two times followed, the priority is not applied
             /*if(s.equals("^") && stackOperation.equals("^")) {
                 this.operationsStack.push(s);
                 this.operationsStack.push(stackOperation);

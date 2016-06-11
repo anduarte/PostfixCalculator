@@ -1,7 +1,7 @@
-package org.academiadecodigo.specialcalculator;
+package org.academiadecodigo.postfixcalculator;
 
-import org.academiadecodigo.specialcalculator.util.PostfixConversion;
-import org.academiadecodigo.specialcalculator.util.Utils;
+import org.academiadecodigo.postfixcalculator.util.PostfixConversion;
+import org.academiadecodigo.postfixcalculator.util.Utils;
 
 import java.io.IOException;
 

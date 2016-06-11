@@ -1,9 +1,9 @@
-package org.academiadecodigo.specialcalculator;
+package org.academiadecodigo.postfixcalculator;
 
-import org.academiadecodigo.specialcalculator.model.Stack;
-import org.academiadecodigo.specialcalculator.model.Brain;
-import org.academiadecodigo.specialcalculator.model.Display;
-import org.academiadecodigo.specialcalculator.util.OperationType;
+import org.academiadecodigo.postfixcalculator.model.Stack;
+import org.academiadecodigo.postfixcalculator.model.Brain;
+import org.academiadecodigo.postfixcalculator.model.Display;
+import org.academiadecodigo.postfixcalculator.util.OperationType;
 
 /**
  * Created by codecadet on 10/05/16.
@@ -11,6 +11,11 @@ import org.academiadecodigo.specialcalculator.util.OperationType;
 public class Controller {
     Stack valueStack;
 
+    /**
+     * Calculate an expression and print the result
+     *
+     * @param expression Expression to be calculated
+     */
     public void calculate(String[] expression) {
         this.valueStack = new Stack(expression.length); // create a stack for the values
         Brain brain = new Brain();                      // create the brain

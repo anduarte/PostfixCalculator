@@ -1,4 +1,4 @@
-package org.academiadecodigo.specialcalculator.util;
+package org.academiadecodigo.postfixcalculator.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +10,9 @@ import java.io.InputStreamReader;
 public class Utils {
 
     /**
-     * @return String with the input
+     * Read the user input
+     *
+     * @return Input
      * @throws IOException
      */
     public static String readInput() throws IOException {
@@ -21,9 +23,10 @@ public class Utils {
     }
 
     /**
-     * Process the expression received from the input to be correctly reade
-     * @param expression
-     * @return
+     * Process the expression received from the input to be correctly readed
+     *
+     * @param expression readed from the input
+     * @return the expression in the way that the program can read
      */
     public static String processExpression(String[] expression) {
         String str = "";

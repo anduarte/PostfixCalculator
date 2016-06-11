@@ -1,12 +1,19 @@
-package org.academiadecodigo.specialcalculator.model;
+package org.academiadecodigo.postfixcalculator.model;
 
 /**
  * Created by codecadet on 10/05/16.
+ *
+ * Stack class
  */
 public class Stack {
     private String[] stack;
     private int stackPosition;  // total of values in the stack
 
+    /**
+     * Construct a stack
+     *
+     * @param size Stack size
+     */
     public Stack(int size) {
         this.stackPosition = 0;
         this.stack = new String[size];
@@ -14,6 +21,7 @@ public class Stack {
 
     /**
      * Push a value to the stack
+     *
      * @param str
      */
     public void push(String str) {
@@ -23,6 +31,7 @@ public class Stack {
 
     /**
      * Pops a value out of the stack
+     *
      * @return
      */
     public String pop() {
@@ -32,6 +41,7 @@ public class Stack {
 
     /**
      * checks if the stack is empty
+     *
      * @return
      */
     public boolean isEmpty() {

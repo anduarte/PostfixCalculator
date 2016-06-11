@@ -1,7 +1,9 @@
-package org.academiadecodigo.specialcalculator.util;
+package org.academiadecodigo.postfixcalculator.util;
 
 /**
  * Created by codecadet on 10/05/16.
+ *
+ * Enum with the allowed operations
  */
 public enum  OperationType {
     ADD("+", 0), SUB("-", 0), MULTI("*", 1), DIV("/", 1), POW("^", 2);
@@ -9,6 +11,12 @@ public enum  OperationType {
     private String symbol;  // Operation symbol
     private int priority;   // Give a priority to the operation. Used on the postfix conversion
 
+    /**
+     * Construct a operation with is basic information
+     *
+     * @param symbol The symbol that identify the operation
+     * @param priority The priority of the operation
+     */
     OperationType(String symbol, int priority) {
         this.symbol = symbol;
         this.priority = priority;
@@ -20,8 +28,9 @@ public enum  OperationType {
 
     /**
      * Checks what is the symbol and returns the operation type
+     *
      * @param symbol
-     * @return
+     * @return Operation type
      */
     public static OperationType symbolToOperation(String symbol) {
         switch (symbol) {
