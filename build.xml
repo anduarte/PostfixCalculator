@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="JarBuild" basedir="." default="jarfile">
     <target name="init" description="init properties">
-        <property name="project.name" value="SpecialCalculator" />
+        <property name="project.name" value="PostfixCalculator" />
         <property name="src.dir" value="src" />
         <property name="build.dir" value="build" />
         <property name="classes.dir" value="${build.dir}/classes/" />
