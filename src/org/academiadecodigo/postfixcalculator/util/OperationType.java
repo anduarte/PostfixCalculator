@@ -2,7 +2,7 @@ package org.academiadecodigo.postfixcalculator.util;
 
 /**
  * Created by codecadet on 10/05/16.
- *
+ * <p>
  * Enum with the allowed operations
  */
 public enum  OperationType {
@@ -13,7 +13,7 @@ public enum  OperationType {
 
     /**
      * Construct a operation with is basic information
-     *
+     * <p>
      * @param symbol The symbol that identify the operation
      * @param priority The priority of the operation
      */
@@ -28,7 +28,7 @@ public enum  OperationType {
 
     /**
      * Checks what is the symbol and returns the operation type
-     *
+     * <p>
      * @param symbol
      * @return Operation type
      */

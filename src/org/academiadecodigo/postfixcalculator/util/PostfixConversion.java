@@ -4,7 +4,7 @@ import org.academiadecodigo.postfixcalculator.model.Stack;
 
 /**
  * Created by andre on 14/05/2016.
- *
+ * <p>
  * Class that handles with the conversion from infix to postfix
  */
 public class PostfixConversion {
@@ -14,7 +14,8 @@ public class PostfixConversion {
     private Stack operationsStack;
 
     /**
-     * Convert infix to postfix
+     * Convert infix to postfix.
+     * <p>
      * @param str mathematical expression to convert
      * @return Postfix expression
      */
@@ -42,8 +43,8 @@ public class PostfixConversion {
 
     /**
      * Organize the operation.
-     * Verify the priority of the operation and manipulate the stack operations
-     *
+     * <p>Verify the priority of the operation and manipulate the stack operations.
+     * <p>
      * @param s Operation
      */
     public void operatorVerification(String s) {

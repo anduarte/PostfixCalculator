@@ -2,7 +2,7 @@ package org.academiadecodigo.postfixcalculator.model;
 
 /**
  * Created by codecadet on 10/05/16.
- *
+ * <p>
  * Stack class
  */
 public class Stack {
@@ -11,7 +11,7 @@ public class Stack {
 
     /**
      * Construct a stack
-     *
+     * <p>
      * @param size Stack size
      */
     public Stack(int size) {
@@ -21,7 +21,7 @@ public class Stack {
 
     /**
      * Push a value to the stack
-     *
+     * <p>
      * @param str
      */
     public void push(String str) {
@@ -31,7 +31,7 @@ public class Stack {
 
     /**
      * Pops a value out of the stack
-     *
+     * <p>
      * @return
      */
     public String pop() {
@@ -41,7 +41,7 @@ public class Stack {
 
     /**
      * checks if the stack is empty
-     *
+     * <p>
      * @return
      */
     public boolean isEmpty() {

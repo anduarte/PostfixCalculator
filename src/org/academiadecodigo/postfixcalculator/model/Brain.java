@@ -4,7 +4,7 @@ import org.academiadecodigo.postfixcalculator.util.OperationType;
 
 /**
  * Created by codecadet on 10/05/16.
- *
+ * <p>
  * Class responsible to calculate
  */
 public class Brain {
@@ -32,7 +32,7 @@ public class Brain {
 
     /**
      * Responsible for doing the operations
-     *
+     * <p>
      * @param number
      * @param number2
      * @param op Operation

@@ -13,7 +13,7 @@ public class Controller {
 
     /**
      * Calculate an expression and print the result
-     *
+     * <p>
      * @param expression Expression to be calculated
      */
     public void calculate(String[] expression) {
